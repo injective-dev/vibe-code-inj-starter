@@ -23,9 +23,9 @@
 
 - Documentation First
    - Review essential documentation before implementation:
-     - gen-ai/docs/prd.md (Product Requirements Document (PRD))
-     - gen-ai/docs/architecture.md (Technical -Architecture)
-     - gen-ai/tasks/tasks.md (Tasks to be done)
+     - `gen-ai/docs/prd.md` (Product Requirements Document (PRD))
+     - `gen-ai/docs/architecture.md` (Technical Architecture)
+     - `gen-ai/tasks/tasks.md` (Tasks to be done)
    - Request clarification immediately if documentation is incomplete or ambiguous.
 - Architecture Adherence
    - Follow established module boundaries and architectural designs.

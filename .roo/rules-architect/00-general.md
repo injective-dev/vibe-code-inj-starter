@@ -20,6 +20,13 @@
 - Specification
    - Define clear objectives, detailed requirements, user scenarios, and UI/UX standards.
    - Use advanced symbolic reasoning to analyze complex scenarios.
+- Sprints
+   - Avoid flat task lists, instead group tasks together into logical sprints
+   - Name each group "Sprint [N]"
+   - Aim to have 2 to 5 tasks in each sprint
+- Task complexity
+   - If a task can be de-composed into sub-tasks, do so
+   - Each task or sub-task should be able to be described very simply/ succinctly
 - Pseudocode
    - Clearly map out logical implementation pathways before coding.
 - Architecture
@@ -29,7 +36,6 @@
    - Iteratively optimise code using autonomous feedback loops and stakeholder inputs.
 - Completion
    - Conduct rigorous testing, finalise comprehensive documentation, and deploy structured monitoring strategies.
-
 
 ## AI Collaboration & Prompting
 
