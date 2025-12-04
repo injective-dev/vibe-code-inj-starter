@@ -1,79 +1,75 @@
 # Product Requirements Document
 
 ## Project
+**Injective EVM NFT Project**
 
 Participants:
-
-TODO - Who is involved? Include the product owner, team, stakeholders
+- Developer (Roo)
+- User (Project Owner)
 
 Status:
-
-TODO - What's the current state of the program? On target, at risk, delayed, deferred, etc.
+- Planning
 
 Target release:
-
-TODO - When is it projected to ship?
+- TBD
 
 ## Goals and Objectives
-
-- Goal/ objective 1
-- ...
+- Launch a functional ERC721 NFT collection on Injective Testnet EVM.
+- Demonstrate efficient on-chain data storage (bit-packing).
+- Implement a custom royalty mechanism where royalties are paid in INJ during every transfer.
+- Provide a web2 server for dynamic SVG rendering based on on-chain data.
+- Provide a vanilla JS dApp for minting, viewing, and transferring NFTs.
 
 ## Background and strategic fit
-
-TODO - Why are we doing this? How does this fit into the overall company objectives?
+This project serves as a proof-of-concept for building advanced NFT mechanics on Injective's EVM layer, utilizing efficient storage patterns and custom transfer logic.
 
 ## Assumptions
 
-Technical assumptions:
+### Technical assumptions:
+- **Network:** Injective Testnet EVM (Chain ID: 1439).
+- **Standard:** ERC721 (OpenZeppelin).
+- **Tooling:** Hardhat for contracts, Viem for frontend.
+- **Browser:** Modern browser with Metamask or compatible Web3 wallet.
 
-- Assumption 1
-- ...
-
-Business assumptions:
-
-- Assumption 1
-- ...
-
-User assumptions:
-
-- Assumption 1
-- ...
+### Business assumptions:
+- Users are willing to pay INJ for both gas and the mandatory royalty fee during transfers.
+- The "Artist" is defined as the original minter of the NFT.
 
 ## User Stories
 
-### User Story 1
+### User Story 1: Minting
+As a user, I want to mint a new NFT by paying a flat fee in INJ, so that I can own a unique generative art piece.
+- **Outcome:** User receives an NFT. The smart contract records the user as the "Artist".
+- **Fee:** Flat minting fee (paid to smart contract).
 
-As a (insert user persona), I want to (insert task), so that (insert intended outcome).”
+### User Story 2: Viewing
+As a user, I want to view my NFTs in the dApp, so that I can see the generated artwork.
+- **Outcome:** The dApp displays the rendered SVG image fetched from the web2 server.
 
-Definition of done: (insert definition of done)
+### User Story 3: Transferring with Royalty
+As an owner, I want to transfer my NFT to another address, paying the required royalty fee in INJ, so that the transfer is successful.
+- **Outcome:** Ownership changes. Royalty fee is split between the Smart Contract Balance and the Artist.
 
-List of tasks/ subtasks/ ordered steps: (insert list of tasks/ subtasks/ ordered steps)
-
-... (more user stories) ...
-
-### Customer interviews
-
-- (insert link to, or screenshot from, customer interviews)
-- ...
+### User Story 4: Admin Management
+As the contract owner, I want to update fees and withdraw accumulated funds, so that I can manage the project's economy.
+- **Outcome:** Fees are updated or funds are withdrawn to the owner's wallet.
 
 ## User interaction and design
 
 ### Wireframes
-
-(insert labelled drawing/ sketch of a screen)
-...
-
-### Activity streams
-
-(insert drawing depicting user flows between screens)
+- **Main Page:**
+    - "Connect Wallet" button.
+    - "Mint" section (Mint button, Fee display).
+    - "My Gallery" section (Grid of owned NFTs).
+    - "Transfer" modal/section (Input for recipient address, Transfer button with Fee display).
 
 ## Questions
-
-- Q: (insert question for any items needed to research and decide on)
-  - A: (insert answer to the above question if known, otherwise: "TBD")
-- ...
+- **Q:** What is the coordinate system for the shapes?
+  - **A:** TBD (Assumed 0-255 for byte efficiency).
+- **Q:** Is the transfer function strictly ERC721 compliant (non-payable) or custom (payable)?
+  - **A:** Custom payable transfer (per requirements).
 
 ## What we are not doing
-
-- (insert items that are considered out of scope in current iteration)
+- We are not building a marketplace contract (trading logic is embedded in transfer).
+- We are not using frontend frameworks (React, Vue, etc.).
+- We are not using IPFS for metadata (metadata is dynamic/server-based).

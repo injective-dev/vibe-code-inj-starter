@@ -1,0 +1,24 @@
+# Smart Contract Tasks
+
+- [ ] sprint 1
+  - [ ] Initialize Hardhat project
+  - [ ] Install dependencies (`@openzeppelin/contracts`, `dotenv`, etc.)
+  - [ ] Configure Hardhat for Injective Testnet EVM
+  - [ ] Implement `GenArtNFT.sol`
+      - [ ] Inherit `ERC721`, `Ownable`
+      - [ ] Define `struct Shape` and bit-packing logic
+      - [ ] Implement `mint()` with random data generation and fee payment
+      - [ ] Implement `transferWithRoyalty()` with fee distribution logic
+      - [ ] Implement `tokenURI()` to point to the web2 server
+      - [ ] Implement Admin functions (`setFees`, `withdraw`)
+- [ ] sprint 2
+  - [ ] Write Unit Tests
+      - [ ] Test Minting (data storage, fee deduction)
+      - [ ] Test Transfer (ownership change, royalty split)
+      - [ ] Test Admin functions
+  -  [ ] Validate security
+    - [ ] perform static tests
+    - [ ] perform dynamic tests
+- [ ] sprint 3
+  - [ ] Deploy to Injective Testnet EVM
+  - [ ] Verify Contract on Blockscout
