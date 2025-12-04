@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+    "injective-docs": {
+      "type": "streamable-http",
+      "url": "https://docs.injective.network/mcp",
+      "timeout": 30,
+      "alwaysAllow": [
+        "SearchInjectiveDocs"
+      ],
+      "disabledTools": []
+    },
+    "git-mcp": {
+      "type": "streamable-http",
+      "url": "https://gitmcp.io/docs",
+      "timeout": 60,
+      "alwaysAllow": [
+        "fetch_generic_documentation",
+        "search_generic_documentation",
+        "search_generic_code"
+      ],
+      "disabledTools": []
+    }
+  }
+}
