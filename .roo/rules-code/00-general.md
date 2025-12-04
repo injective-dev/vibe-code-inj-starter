@@ -1,5 +1,7 @@
 # Rules for the Code Roo Mode
 
+- Add any code (implementation, tests, or other) within within the `src/` directory, or subdirectories within it that you created
+
 ## General Guidelines for Programming Languages
 
 - Clarity and Readability
