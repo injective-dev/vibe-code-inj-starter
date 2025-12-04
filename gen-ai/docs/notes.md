@@ -1,0 +1,5 @@
+- in GenArtNFT.sol
+  - artist share and owner share should be independently configurable (not assumed 50-50)
+  - when minting, do not generate shape at random, user will select these attributes in the dApp, therefore it should be passed in as parameters
+  - shape data among NFTs should be unique, so add a mechanism to detect and prevent duplicates
+  - transfer with royalty is OK, but regular `transfer` method can still be called to bypass the royalty - fix this
