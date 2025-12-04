@@ -23,7 +23,6 @@
 
 - Documentation First
    - Review essential documentation before implementation:
-     - README.md
      - gen-ai/docs/prd.md (Product Requirements Document (PRD))
      - gen-ai/docs/architecture.md (Technical -Architecture)
      - gen-ai/tasks/tasks.md (Tasks to be done)
