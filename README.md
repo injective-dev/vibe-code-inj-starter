@@ -1,7 +1,8 @@
 # vibe-code-inj-starter
 
 A starter repo for you to vibe code Injective projects with.
-Optimised for Roo.
+Optimised for [Roo](https://roocode.com/).
+Configured for [building on Injective](https://docs.injective.network/developers/).
 
 ## Quick Start
 
@@ -11,7 +12,13 @@ Optimised for Roo.
   - Configure Roo
     - API endpoint and key to access LLMs
     - Select model
-  - `rm src/.gitignore`
+  - Make a copy of this repo
+    - `git clone git@github.com:injective-dev/vibe-code-inj-starter.git ./your-project-name`
+    - `cd ./your-project-name`
+    - In GitHub, create a new empty repo
+    - `git remote rm origin`
+    - `git remote add origin git@github.com:YOUR_GITHUB_USERNAME/YOUR_PROJECT_NAME.git`
+    - `git push origin main`
 - Review the following files:
   - Architecture: `/gen-ai/docs/architecture.md`
   - Product Requirements Document (PRD): `/gen-ai/docs/prd.md`
@@ -38,12 +45,27 @@ Optimised for Roo.
   - If anything is missing or incorrect, fix them by:
     - either manually editing, or
     - using further prompts
-- Advanced
-  - Open Roo, and select the "Debug" Roo mode or "Orchestrator" Roo mode
-    - If you have made it this far, you probably already have the skills to figure out how to use these modes on your own ;P
-  - Customise rules
-    - Look in the `/.roo/rules` directory, and edit the general system prompt
-    - Look in the `/.roo/rules-MODE_NAME` directories, and edit the specific system prompt for each Roo mode
+
+## Advanced
+
+- Open Roo, and select the "Debug" Roo mode or "Orchestrator" Roo mode
+  - If you have made it this far, you probably already have the skills to figure out how to use these modes on your own ;P
+
+## Customisation
+
+- Customise rules
+  - Look in the `/.roo/rules` directory, and edit the general system prompt
+  - Look in the `/.roo/rules-MODE_NAME` directories, and edit the specific system prompt for each Roo mode
+- Customise templates
+  - Look in `gen-ai/docs/architecture.md` for the technical architecture template, and edit
+  - Look in `gen-ai/docs/prd.md` for the product requirements doc (PRD) template, and edit
+  - Look in `gen-ai/tasks/tasks.md` for the task lists template, and edit
+- Customise the Roo modes
+  - Look in the `gen-ai/roo-modes/MODE_NAME.yaml` files, and edit the various attributes of each
+  - In Roo, in settings for Roo modes, you can import these YAML files
+
+If you do customise these files, and think that these would be valuable for other users,
+please do contribute your changes to this repo by submitting a PR!
 
 ## Licence
 
